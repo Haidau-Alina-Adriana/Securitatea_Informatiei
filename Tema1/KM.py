@@ -37,8 +37,8 @@ def realize_connection(HOST, PORT):
     m = mode.decode('utf-8')
     if m == 'CBC':
         k_prim = b"alabalaportocala"
-        print("K_prim: ")
-        print(k_prim)
+        # print("K_prim: ")
+        # print(k_prim)
         sock.send(k_prim)
         k = get_random_bytes(16)
         result = generate_cbc_key(k, k_prim)
@@ -73,4 +73,3 @@ if __name__ == "__main__":
     HOST = '127.0.0.1'
     PORT_KM = 6000
     realize_connection(HOST, PORT_KM)
-    
